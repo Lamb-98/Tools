@@ -1,0 +1,16 @@
+1. 创建爬虫的项目  scrapy startproject 项目名
+注意：项目的名字不允许使用数字开头，也不能包含中文
+
+2. 创建爬虫文件
+    要在spiders文件夹中去创建爬虫文件
+    cd 项目名\项目名\spiders
+
+    创建爬虫文件
+    scrapy genspider 爬虫文件名 目标网页
+    eg：scrapy genspider baidu http://www.baidu.com
+    一般目标网页不输入http://，因为start_urls的值是根据allowed_domains修改的
+
+3. 运行爬虫代码
+    scrapy crawl 爬虫名
+    eg：scrapy crawl baidu
+    注意：注释掉settings.py里的ROBOTSTXT_OBEY = True
